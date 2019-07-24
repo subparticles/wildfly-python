@@ -11,10 +11,10 @@ ENV LANG en_US.UTF-8
 RUN python3.6 -m ensurepip
 
 # Create a symlink so it can be called using python3
-RUN ln -s /usr/bin/python3.6 /usr/bin/python3
+# RUN ln -s /usr/bin/python3.6 /usr/bin/python3
 
 # Symlink pip3 into /usr/bin for consistency and ease of use with sudo
-# RUN ln -s /usr/local/bin/pip3 /usr/bin/pip3
+RUN ln -s /usr/local/bin/pip3 /usr/bin/pip3
 
 # Symlink easy_install3 into /usr/bin for consistency and ease of use with sudo
 RUN ln -s /usr/local/bin/easy_install-3.6 /usr/bin/easy_install3
